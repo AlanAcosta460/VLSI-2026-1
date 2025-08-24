@@ -12,6 +12,7 @@ ARCHITECTURE behavior OF circuito1 IS
 BEGIN
 	Y1 <= (NOT A AND B) OR 
           (A AND NOT B);
+
 	Y2 <= (A OR B) AND 
           (NOT A OR NOT B);
 END behavior;
