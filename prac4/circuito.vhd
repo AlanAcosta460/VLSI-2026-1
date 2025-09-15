@@ -10,35 +10,35 @@ END circuito;
 
 ARCHITECTURE behavior OF circuito IS
 BEGIN
-	Sa <= (NOT A AND NOT B AND NOT C AND D) OR
-			(NOT A AND B AND NOT C AND NOT D) OR
-			(A AND B AND NOT C AND D) OR
-			(A AND NOT B AND C AND D);
+    Sa <= (NOT A AND NOT B AND NOT C AND D) OR
+          (NOT A AND B AND NOT C AND NOT D) OR
+          (A AND B AND NOT C AND D) OR
+          (A AND NOT B AND C AND D);
 	
-	Sb <= (B AND C AND NOT D) OR
-			(A AND B AND NOT D) OR
-			(A AND C AND D) OR
-			(NOT A AND B AND NOT C AND D);
+    Sb <= (B AND C AND NOT D) OR
+          (A AND B AND NOT D) OR
+          (A AND C AND D) OR
+          (NOT A AND B AND NOT C AND D);
 			
-	Sc <= (A AND B AND C) OR
-			(A AND B AND NOT D) OR
-			(NOT A AND NOT B AND C AND NOT D);
+    Sc <= (A AND B AND C) OR
+          (A AND B AND NOT D) OR
+          (NOT A AND NOT B AND C AND NOT D);
 			
-	Sd <= (NOT B AND NOT C AND D) OR
-			(B AND C AND D) OR
-			(NOT A AND B AND NOT C AND NOT D) OR
-			(A AND NOT B AND C AND NOT D);
+    Sd <= (NOT B AND NOT C AND D) OR
+          (B AND C AND D) OR
+          (NOT A AND B AND NOT C AND NOT D) OR
+          (A AND NOT B AND C AND NOT D);
 	
-	Se <= (NOT A AND D) OR
-			(NOT A AND B AND NOT C) OR
-			(NOT B AND NOT C AND D);
+    Se <= (NOT A AND D) OR
+          (NOT A AND B AND NOT C) OR
+          (NOT B AND NOT C AND D);
 			
-	Sf <= (NOT A AND NOT B AND D) OR
-			(NOT A AND C AND D) OR
-			(NOT A AND NOT B AND C) OR
-			(A AND B AND NOT C AND D);
+    Sf <= (NOT A AND NOT B AND D) OR
+          (NOT A AND C AND D) OR
+          (NOT A AND NOT B AND C) OR
+          (A AND B AND NOT C AND D);
 	
-	Sg <= (NOT A AND NOT B AND NOT C) OR
-			(A AND B AND NOT C AND NOT D) OR
-			(NOT A AND B AND C AND D);
+    Sg <= (NOT A AND NOT B AND NOT C) OR
+          (A AND B AND NOT C AND NOT D) OR
+          (NOT A AND B AND C AND D);
 END behavior;
