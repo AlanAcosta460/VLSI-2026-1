@@ -1,0 +1,36 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY circuito7 IS
+	PORT (
+		A, B, C					: IN STD_LOGIC;
+		S1A, S2A, S1B, S2B 	: OUT STD_LOGIC
+	);
+END circuito7;
+
+ARCHITECTURE flujo OF circuito7 IS
+BEGIN
+	WITH ((A AND B AND NOT C) OR (A AND B AND C)) SELECT 
+		S1A <= '1' WHEN '0',
+				 '0' WHEN OTHERS;
+	
+	WITH (A AND B AND NOT C) SELECT
+		S2A <= '1' WHEN '0',
+				 '0' WHEN OTHERS;
+END flujo;
+
+ARCHITECTURE comportamiento OF circuito7 IS
+	SIGNAL Y1, Y2, Y3, Y4 : STD_LOGIC;
+BEGIN
+	proceso: PROCESS (A, B, C)
+	BEGIN
+		Y1 <= A XNOR B;
+		S1B <= Y1 AND C;
+		
+		Y2 <= A NAND B;
+		Y3 <= A OR B;
+		Y4 <= Y3 AND C;
+		S2B <= Y2 AND Y4;
+	END PROCESS proceso;
+END comportamiento;
