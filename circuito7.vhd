@@ -9,20 +9,12 @@ ENTITY circuito7 IS
 	);
 END circuito7;
 
-ARCHITECTURE flujo OF circuito7 IS
-BEGIN
-	WITH ((A AND NOT B AND NOT C) OR (A AND B AND C)) SELECT 
-		S1A <= '1' WHEN '0',
-				 '0' WHEN OTHERS;
-	
-	WITH (A AND B AND NOT C) SELECT
-		S2A <= '1' WHEN '0',
-				 '0' WHEN OTHERS;
-END flujo;
-
-ARCHITECTURE comportamiento OF circuito7 IS
+ARCHITECTURE arc OF circuito7 IS
 	SIGNAL Y1, Y2, Y3, Y4 : STD_LOGIC;
 BEGIN
+	S1A <= (A XNOR B) XOR C;
+	S2A <= (A NAND B) OR ((A OR B) AND C);
+
 	proceso: PROCESS (A, B, C)
 	BEGIN
 		Y1 <= A XNOR B;
@@ -33,4 +25,4 @@ BEGIN
 		Y4 <= Y3 AND C;
 		S2B <= Y2 OR Y4;
 	END PROCESS proceso;
-END comportamiento;
+END arc;
