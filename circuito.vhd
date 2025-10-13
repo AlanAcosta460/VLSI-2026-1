@@ -9,7 +9,7 @@ ENTITY circuito IS
     );
 END circuito;
 
-ARCHITECTURE design OF circuito IS
+ARCHITECTURE arc OF circuito IS
 BEGIN
     S1(0) <= NOT A2 AND NOT A1 AND NOT A0;
     S1(1) <= NOT A2 AND NOT A1 AND A0;
@@ -73,4 +73,4 @@ BEGIN
 		    CASE (A2 AND A1 AND NOT A0) IS WHEN '1' => S6(6) <= '1'; WHEN OTHERS => S6(6) <= '0'; END CASE;
 		    CASE (A2 AND A1 AND A0) IS WHEN '1' => S6(7) <= '1'; WHEN OTHERS => S6(7) <= '0'; END CASE;
     END PROCESS proceso3;
-END behavior;
+END arc;
