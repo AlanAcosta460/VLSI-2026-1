@@ -11,7 +11,7 @@ END circuito7;
 
 ARCHITECTURE flujo OF circuito7 IS
 BEGIN
-	WITH ((A AND B AND NOT C) OR (A AND B AND C)) SELECT 
+	WITH ((A AND NOT B AND NOT C) OR (A AND B AND C)) SELECT 
 		S1A <= '1' WHEN '0',
 				 '0' WHEN OTHERS;
 	
