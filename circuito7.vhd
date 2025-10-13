@@ -26,11 +26,11 @@ BEGIN
 	proceso: PROCESS (A, B, C)
 	BEGIN
 		Y1 <= A XNOR B;
-		S1B <= Y1 AND C;
+		S1B <= Y1 XOR C;
 		
 		Y2 <= A NAND B;
 		Y3 <= A OR B;
 		Y4 <= Y3 AND C;
-		S2B <= Y2 AND Y4;
+		S2B <= Y2 OR Y4;
 	END PROCESS proceso;
 END comportamiento;
