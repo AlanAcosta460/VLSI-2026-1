@@ -9,7 +9,7 @@ ENTITY circuito IS
     );
 END circuito;
 
-ARCHITECTURE behavior OF circuito IS
+ARCHITECTURE design OF circuito IS
 BEGIN
     S1(0) <= NOT A2 AND NOT A1 AND NOT A0;
     S1(1) <= NOT A2 AND NOT A1 AND A0;
