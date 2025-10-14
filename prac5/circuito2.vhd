@@ -2,11 +2,10 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-ENTITY circuito7 IS
-	PORT (
-		A, B, C					: IN STD_LOGIC;
-		S1A, S2A, S1B, S2B 	: OUT STD_LOGIC
-	);
+ENTITY circuito7 IS PORT (
+    A, B, C             : IN STD_LOGIC;
+    S1A, S2A, S1B, S2B  : OUT STD_LOGIC
+);
 END circuito7;
 
 ARCHITECTURE arc OF circuito7 IS
