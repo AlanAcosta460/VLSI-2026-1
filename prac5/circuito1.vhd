@@ -76,19 +76,19 @@ BEGIN
     BEGIN
         CASE (NOT A2 AND NOT A1 AND NOT A0) IS  
             WHEN '1' => S6(0) <= '1'; WHEN OTHERS => S6(0) <= '0'; END CASE;
-		CASE (NOT A2 AND NOT A1 AND A0) IS 
+        CASE (NOT A2 AND NOT A1 AND A0) IS 
             WHEN '1' => S6(1) <= '1'; WHEN OTHERS => S6(1) <= '0'; END CASE;
-		CASE (NOT A2 AND A1 AND NOT A0) IS 
+        CASE (NOT A2 AND A1 AND NOT A0) IS 
             WHEN '1' => S6(2) <= '1'; WHEN OTHERS => S6(2) <= '0'; END CASE;
-	      CASE (NOT A2 AND A1 AND A0) IS 
+        CASE (NOT A2 AND A1 AND A0) IS 
             WHEN '1' => S6(3) <= '1'; WHEN OTHERS => S6(3) <= '0'; END CASE;
-		CASE (A2 AND NOT A1 AND NOT A0) IS 
+        CASE (A2 AND NOT A1 AND NOT A0) IS 
             WHEN '1' => S6(4) <= '1'; WHEN OTHERS => S6(4) <= '0'; END CASE;
-		CASE (A2 AND NOT A1 AND A0) IS 
+        CASE (A2 AND NOT A1 AND A0) IS 
             WHEN '1' => S6(5) <= '1'; WHEN OTHERS => S6(5) <= '0'; END CASE;
-		CASE (A2 AND A1 AND NOT A0) IS 
+        CASE (A2 AND A1 AND NOT A0) IS 
             WHEN '1' => S6(6) <= '1'; WHEN OTHERS => S6(6) <= '0'; END CASE;
-		CASE (A2 AND A1 AND A0) IS 
+        CASE (A2 AND A1 AND A0) IS 
             WHEN '1' => S6(7) <= '1'; WHEN OTHERS => S6(7) <= '0'; END CASE;
     END PROCESS proceso3;
 END arc;
